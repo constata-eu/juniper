@@ -61,7 +61,7 @@ use juniper::{
 /// automatically from both GET and POST routes by implementing the `FromForm`
 /// and `FromData` traits.
 #[derive(Debug, PartialEq)]
-pub struct GraphQLRequest<S = DefaultScalarValue>(GraphQLBatchRequest<S>)
+pub struct GraphQLRequest<S = DefaultScalarValue>(pub GraphQLBatchRequest<S>)
 where
     S: ScalarValue;
 
